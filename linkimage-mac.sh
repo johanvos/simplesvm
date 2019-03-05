@@ -1,10 +1,10 @@
 #!/bin/sh
-SVMBUILD=/home/johan/graal/github/fork/graal/substratevm/svmbuild/native-image-root-11/
-JFXLIB=/home/johan/open-jfx/github/forks/openjdk-jfx/build/sdk/lib
+SVMBUILD=/Users/johan/graal/github/fork/graal/substratevm/svmbuild/native-image-root-11/
+JFXLIB=/Users/johan/open-jfx/github/forks/openjdk-jfx/build/sdk/lib
 PWD=`pwd`
 SVMLIB=$SVMBUILD/lib
 echo "Compile src\n============"
-javac -p $JFXLIB --add-modules javafx.controls -d class src/java/HelloFX.java
+javac -p $JFXLIB --add-modules javafx.controls -d class src/HelloFX.java
 echo "Done\nRunning native-image now"
 java \
 -XX:+UnlockExperimentalVMOptions \
@@ -43,11 +43,13 @@ java \
 -cp $SVMLIB/jvmci/graal-sdk.jar:$SVMLIB/jvmci/graal.jar:$SVMLIB/svm/builder/objectfile.jar:$SVMLIB/svm/builder/pointsto.jar:$SVMLIB/svm/builder/svm.jar com.oracle.svm.hosted.NativeImageGeneratorRunner \
 -imagecp $SVMLIB/jvmci/graal-sdk.jar:$SVMLIB/jvmci/graal.jar:$SVMLIB/svm/builder/objectfile.jar:$SVMLIB/svm/builder/pointsto.jar:$SVMLIB/svm/builder/svm.jar:$SVMLIB/svm/library-support.jar:$JFXLIB/javafx.base.jar:$JFXLIB/javafx.graphics.jar:$JFXLIB/javafx.controls.jar:$PWD/class \
 -H:Path=$PWD/image \
--H:CLibraryPath=$SVMLIB/svm/clibraries/linux-amd64 \
+-H:CLibraryPath=$SVMLIB/svm/clibraries/darwin-amd64 \
 -H:Class=HelloFX \
--H:ReflectionConfigurationFiles=reflectionconfig-linux.json \
--H:JNIConfigurationFiles=jniconfig-linux.json \
+-H:ReflectionConfigurationFiles=reflectionconfig-mac.json \
+-H:JNIConfigurationFiles=jniconfig-mac.json \
 -H:+ReportExceptionStackTraces \
+-H:Kind=SHARED_LIBRARY \
+-H:TempDirectory=$PWD/tmp \
 -H:DelayClassInitialization=javafx.scene.CssStyleHelper \
 -H:DelayClassInitialization=com.sun.prism.es2.ES2VramPool \
 -H:DelayClassInitialization=com.sun.javafx.iio.jpeg.JPEGImageLoader \
@@ -58,11 +60,8 @@ java \
 -H:DelayClassInitialization=com.sun.javafx.tk.quantum.UploadingPainter \
 -H:DelayClassInitialization=com.sun.prism.impl.ps.BaseShaderContext \
 -H:DelayClassInitialization=com.sun.prism.impl.ps.PaintHelper \
--H:DelayClassInitialization=com.sun.javafx.font.freetype.OSPango \
 -H:RerunClassInitialization=com.sun.javafx.font.PrismFontFactory \
 -H:RerunClassInitialization=com.sun.javafx.font.PrismFontLoader \
--H:RerunClassInitialization=com.sun.javafx.font.freetype.FTFactory \
--H:RerunClassInitialization=com.sun.javafx.font.freetype.OSFreetype \
 -H:NumberOfThreads=1 \
 -H:Name=hellofxsvm \
 -H:IncludeResources=.*/.*frag$ \
