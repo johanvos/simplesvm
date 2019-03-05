@@ -75,7 +75,3 @@ java \
 -H:+ReportUnsupportedElementsAtRuntime \
 -H:+AllowIncompleteClasspath \
 -H:EnableURLProtocols=resource
-echo "Native-image created\nRun the application now"
-./image/hellofxsvm
-
-
