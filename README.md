@@ -4,7 +4,7 @@ This project runs the most simple Hello, FX sample using SVM
 
 ## Running on Linux
 
-### requirements ==
+### requirements
 
 SubstrateVM, including PR#1021, #1027, #1031 and #1037
 
@@ -19,9 +19,9 @@ Modify createimage-linux.sh so that it has valid values for SVMBUILD and JFXLIB
 
 `sh createimage-linux.sh`
 
-## Running om Mac
+## Running on Mac
 
-### requirements ==
+### requirements
 
 SubstrateVM, including PR#1021, #1027, #1031 and #1037
 
