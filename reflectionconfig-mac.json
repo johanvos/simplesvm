@@ -166,5 +166,15 @@
     "allDeclaredMethods" : true, 
     "allPublicMethods" : true
   }
+,
+  {
+    "name" : "com.sun.prism.es2.MacGLFactory",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
 
 ]
