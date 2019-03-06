@@ -9,6 +9,7 @@ This project runs the most simple Hello, FX sample using SVM
 SubstrateVM, including PR#1021, #1027, #1031 and #1037
 
 OpenJFX: get repo at https://github.com/johanvos/openjdk-jfx/tree/develop-svm
+or get a binary sdk from https://drive.google.com/file/d/1R-KMZev6DZAUVaJsO_SIfgaasMgflnTn/view?usp=sharing
 
 Java 11 or beyond (tested with 11.0.2)
 
@@ -25,6 +26,7 @@ Modify createimage-linux.sh so that it has valid values for SVMBUILD and JFXLIB
 SubstrateVM, including PR#1021, #1027, #1031 and #1037
 
 OpenJFX: get repo at https://github.com/johanvos/openjdk-jfx/tree/develop-svm
+or get a binary sdk from https://drive.google.com/file/d/1cWQY4Cj1CAnwCT6dJV4ToyVtp7dRTboS/view?usp=sharing
 
 Java 11 or beyond (tested with 11.0.2)
 
