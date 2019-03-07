@@ -9,7 +9,7 @@ echo "compiling\n=========\n"
 gcc -c -isysroot $SDK -o $PWD/build/ios/main.o $PWD/src/native/ios/main.m
 gcc -c -isysroot $SDK -o $PWD/build/ios/AppDelegate.o $PWD/src/native/ios/AppDelegate.m
 echo "linking\n=======\n"
-// mkdir build/ios/hellofx.app
+mkdir -p build/ios/hellofx.app
 clang++ -w -o build/ios/hellofx.app/hellofx \
 -Wl,-no_implicit_dylibs \
 -Wl,-dead_strip \
@@ -26,6 +26,4 @@ build/ios/AppDelegate.o build/ios/main.o $1/hellofxsvm.o -L$SVMBUILD/lib/svm/cli
 echo "preparing app\n=======\n"
 cp src/native/ios/Info.plist build/ios/hellofx.app
 echo "launching app\n=======\n"
-/tmp/simlauncher  --udid=C3E4154D-00E8-4656-A284-FE9073ECAA10 --app-path=$PWD/build/ios/hellofx.app
-// clang++ -w -o build/ios/hellofx.app/hellofx \
-
+$PWD/src/native/ios/simlauncher  --udid=C3E4154D-00E8-4656-A284-FE9073ECAA10 --app-path=$PWD/build/ios/hellofx.app
