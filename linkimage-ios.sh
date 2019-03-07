@@ -18,6 +18,7 @@ clang++ -w -o build/ios/hellofx.app/hellofx \
 -Wl,-exported_symbols_list,$PWD/src/native/ios/release.symbols \
 -Wl,-all_load,$JFXLIB/libprism_es2.a \
 -Wl,-all_load,$JFXLIB/libglass.a \
+-Wl,-all_load,$JFXLIB/libjavafx_font.a \
 build/ios/AppDelegate.o build/ios/main.o $1/hellofxsvm.o -L$SVMBUILD/lib/svm/clibraries/darwin-amd64 -lffi \
 -lpthread -lz  -lstrictmath -llibchelper \
 -Wl,-framework,Foundation \
