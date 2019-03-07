@@ -20,6 +20,7 @@ public class HelloFX extends Application {
     }
 
     public static void main(String[] args) {
+        System.setProperty("os.name", "ios");
         System.setProperty("javafx.verbose", "true");
         System.setProperty("prism.verbose", "true");
         launch();
