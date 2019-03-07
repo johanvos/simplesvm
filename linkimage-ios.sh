@@ -17,11 +17,23 @@ clang++ -w -o build/ios/hellofx.app/hellofx \
 -isysroot $SDK -arch x86_64 -mios-version-min=8.0 \
 -Wl,-exported_symbols_list,$PWD/src/native/ios/release.symbols \
 -Wl,-all_load,$JFXLIB/libprism_es2.a \
+-Wl,-all_load,$JFXLIB/libglass.a \
 build/ios/AppDelegate.o build/ios/main.o $1/hellofxsvm.o -L$SVMBUILD/lib/svm/clibraries/darwin-amd64 -lffi \
 -lpthread -lz  -lstrictmath -llibchelper \
 -Wl,-framework,Foundation \
 -Wl,-framework,CoreGraphics \
 -Wl,-framework,OpenGLES \
+-Wl,-framework,MobileCoreServices \
+-Wl,-framework,CoreText \
+-Wl,-framework,ImageIO \
+-Wl,-framework,UserNotifications \
+-Wl,-framework,CoreBluetooth \
+-Wl,-framework,CoreLocation \
+-Wl,-framework,CoreMedia \
+-Wl,-framework,AVFoundation \
+-Wl,-framework,Accelerate \
+-Wl,-framework,CoreVideo \
+-Wl,-framework,QuartzCore \
 -Wl,-framework,UIKit
 echo "preparing app\n=======\n"
 cp src/native/ios/Info.plist build/ios/hellofx.app
