@@ -260,6 +260,26 @@
   }
 ,
   {
+    "name" : "com.sun.glass.ui.ios.IosCursor",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.glass.ui.ios.IosPixels",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
     "name" : "com.sun.glass.ui.ios.IosApplication",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
