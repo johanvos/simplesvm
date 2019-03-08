@@ -41,3 +41,25 @@ This creates a tmp/SVMXXXXX dir that has to be supplied to the next command:
 
 `sh linkimage-mac.sh tmp/SVMXXXXXX`
 
+## Running on iPhone Simulator
+
+### requirements
+
+SubstrateVM, including PR#1021, #1027, #1031 and #1037
+
+OpenJFX: get repo at https://github.com/johanvos/openjdk-jfx/tree/develop-svm
+or get a binary sdk from https://drive.google.com/file/d/10KEUcaVeWlXB1TfOdMk3trpdF7NSVi1s/view?usp=sharing
+
+Java 11 or beyond (tested with 11.0.2)
+
+Modify createimage-ios.sh so that it has valid values for SVMBUILD and JFXLIB
+Modify linkimage-ios.sh so that it has valid values for SVMBUILD, JFXLIB and SDK 
+
+### compile and run
+
+`sh createimage-ios.sh`
+
+This creates a tmp/SVMXXXXX dir that has to be supplied to the next command:
+
+`sh linkimage-ios.sh tmp/SVMXXXXXX`
+
