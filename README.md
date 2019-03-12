@@ -6,7 +6,7 @@ This project runs the most simple Hello, FX sample using SVM
 
 ### requirements
 
-SubstrateVM, including PR#1021, #1027, #1031 and #1037
+SubstrateVM (including PR#1021, #1027, #1031 and #1037 which are merged)
 
 OpenJFX: get repo at https://github.com/johanvos/openjdk-jfx/tree/develop-svm
 or get a binary sdk from https://drive.google.com/file/d/1R-KMZev6DZAUVaJsO_SIfgaasMgflnTn/view?usp=sharing
