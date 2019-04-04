@@ -4,9 +4,9 @@ JFXLIB=/Users/johan/open-jfx/github/forks/openjdk-jfx/build/sdk/lib
 PWD=`pwd`
 SVMLIB=$SVMBUILD/lib
 echo "Compile src\n============"
-javac -p $JFXLIB --add-modules javafx.controls -d class src/java/HelloFX.java
+$JAVA_HOME/bin/javac -p $JFXLIB --add-modules javafx.controls -d class src/java/HelloFX.java
 echo "Done\nRunning native-image now"
-java \
+$JAVA_HOME/bin/java \
 -XX:+UnlockExperimentalVMOptions \
 -XX:+EnableJVMCI \
 -XX:-UseJVMCICompiler \
