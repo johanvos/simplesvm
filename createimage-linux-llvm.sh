@@ -4,7 +4,7 @@ JFXLIB=/home/johan/open-jfx/github/forks/openjdk-jfx/build/sdk/lib
 PWD=`pwd`
 SVMLIB=$SVMBUILD/lib
 echo "Compile src\n============"
-$JAVA_HOME/bin/javac -p $JFXLIB --add-modules javafx.controls -d class src/java/HelloFX.java
+$JAVA_HOME/bin/javac -p $JFXLIB --add-modules javafx.controls -d class src/java/HelloWorld.java
 echo "Done\nRunning native-image now"
 $JAVA_HOME/bin/java \
 -XX:+UnlockExperimentalVMOptions \
@@ -33,29 +33,21 @@ $JAVA_HOME/bin/java \
 --add-opens java.base/java.util=ALL-UNNAMED \
 --add-opens org.graalvm.sdk/org.graalvm.nativeimage.impl=ALL-UNNAMED \
 -Xss10m -Xms1g -Xmx13441813704 -Duser.country=US -Duser.language=en \
--Dgraalvm.version=1.0.0-rc13-gvm11-SNAPSHOT \
+-Dgraalvm.version=1.0.0-rc15-gvm11-SNAPSHOT \
 -Xdebug \
 -Xrunjdwp:transport=dt_socket,server=y,address=8000,suspend=n \
--Dorg.graalvm.version=1.0.0-rc13-gvm11-SNAPSHOT \
+-Dorg.graalvm.version=1.0.0-rc15-gvm11-SNAPSHOT \
 -Dcom.oracle.graalvm.isaot=true \
 --module-path $SVMLIB/jvmci/graal-sdk.jar:$SVMLIB/truffle/truffle-api.jar \
 --upgrade-module-path $SVMLIB/jvmci/graal.jar \
 -cp $SVMLIB/jvmci/graal-sdk.jar:$SVMLIB/jvmci/graal.jar:$SVMLIB/svm/builder/svm-llvm.jar:$SVMLIB/svm/builder/graal-llvm.jar:$SVMLIB/svm/builder/objectfile.jar:$SVMLIB/svm/builder/pointsto.jar:$SVMLIB/svm/builder/svm.jar:$SVMLIB/svm/builder/llvm-platform-specific.jar:$SVMLIB/svm/builder/llvm-wrapper.jar:$SVMLIB/svm/builder/javacpp.jar com.oracle.svm.hosted.NativeImageGeneratorRunner \
--imagecp $SVMLIB/jvmci/graal-sdk.jar:$SVMLIB/jvmci/graal.jar:$SVMLIB/svm/builder/svm-llvm.jar:$SVMLIB/svm/builder/graal-llvm.jar:$SVMLIB/svm/builder/objectfile.jar:$SVMLIB/svm/builder/pointsto.jar:$SVMLIB/svm/builder/svm.jar:$SVMLIB/svm/library-support.jar:$JFXLIB/javafx.base.jar:$JFXLIB/javafx.graphics.jar:$JFXLIB/javafx.controls.jar:$PWD/class \
+-imagecp $SVMLIB/jvmci/graal-sdk.jar:$SVMLIB/jvmci/graal.jar:$SVMLIB/svm/builder/svm-llvm.jar:$SVMLIB/svm/builder/graal-llvm.jar:$SVMLIB/svm/builder/objectfile.jar:$SVMLIB/svm/builder/pointsto.jar:$SVMLIB/svm/builder/svm.jar:$SVMLIB/svm/library-support.jar:$PWD/class \
 -H:Path=$PWD/image \
 -H:CLibraryPath=$SVMLIB/svm/clibraries/linux-amd64 \
--H:Class=HelloFX \
+-H:Class=HelloWorld \
 -H:+ReportExceptionStackTraces \
 -H:NumberOfThreads=1 \
--H:Name=hellofxsvm \
--H:IncludeResources=.*/.*frag$ \
--H:IncludeResources=.*/.*fxml$ \
--H:IncludeResources=.*/.*css$ \
--H:IncludeResources=.*/.*gls$ \
--H:IncludeResources=.*/.*ttf$ \
--H:IncludeResources=.*/.*png$ \
--H:IncludeResources=.*png$ \
--H:IncludeResources=.*css$ \
+-H:Name=helloworldsvm \
 -H:+ReportUnsupportedElementsAtRuntime \
 -H:+AllowIncompleteClasspath \
 -H:CompilerBackend=llvm \
@@ -63,6 +55,6 @@ $JAVA_HOME/bin/java \
 -H:-SpawnIsolates \
 -H:EnableURLProtocols=resource
 echo "Native-image created\nRun the application now"
-./image/hellofxsvm
+./image/helloworldsvm
 
 
