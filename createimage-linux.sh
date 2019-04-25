@@ -1,6 +1,6 @@
 #!/bin/sh
 SVMBUILD=/home/johan/graal/github/fork/graal/substratevm/svmbuild/native-image-root-11/
-JFXLIB=/home/johan/open-jfx/github/forks/openjdk-jfx/build/sdk/lib
+JFXLIB=/home/johan/open-jfx/github/forks/openjdk-jfx/build/svmsdk/lib
 PWD=`pwd`
 SVMLIB=$SVMBUILD/lib
 echo "Compile src\n============"
@@ -22,6 +22,7 @@ $JAVA_HOME/bin/java \
 --add-exports jdk.internal.vm.ci/jdk.vm.ci.common=ALL-UNNAMED \
 --add-exports jdk.internal.vm.ci/jdk.vm.ci.code.site=ALL-UNNAMED \
 --add-opens jdk.unsupported/sun.reflect=ALL-UNNAMED \
+--add-opens java.base/jdk.internal.logger=ALL-UNNAMED \
 --add-opens java.base/jdk.internal.module=ALL-UNNAMED \
 --add-opens java.base/jdk.internal.ref=ALL-UNNAMED \
 --add-opens java.base/jdk.internal.reflect=ALL-UNNAMED \
