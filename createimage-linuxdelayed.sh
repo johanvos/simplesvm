@@ -46,7 +46,7 @@ $JAVA_HOME/bin/java \
 -H:Path=$PWD/image \
 -H:CLibraryPath=$SVMLIB/svm/clibraries/linux-amd64 \
 -H:Class=HelloFX \
--H:ReflectionConfigurationFiles=reflectionconfig-linux.json \
+-H:ReflectionConfigurationFiles=reflectionconfig-linux-delayed.json \
 -H:JNIConfigurationFiles=jniconfig-linux.json \
 -H:+ReportExceptionStackTraces \
 -H:NumberOfThreads=1 \

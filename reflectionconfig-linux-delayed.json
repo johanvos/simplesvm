@@ -1,0 +1,186 @@
+[
+  {
+    "name" : "HelloFX",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "javafx.scene.image.Image",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "com.sun.javafx.tk.quantum.QuantumToolkit",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "com.sun.prism.es2.X11GLFactory",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "com.sun.prism.es2.ES2Pipeline",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "com.sun.glass.ui.gtk.GtkPlatformFactory",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "com.sun.javafx.font.freetype.FTFactory",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.scenario.effect.impl.prism.PrRenderer",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.scenario.effect.impl.prism.ps.PPSRenderer",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.scenario.effect.impl.es2.ES2ShaderSource",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.prism.shader.FillCircle_Color_Loader",
+    "allDeclaredConstructors" : true, 
+    "allPublicConstructors" : true, 
+    "allDeclaredFields" : true, 
+    "allPublicFields" : true, 
+    "allDeclaredMethods" : true, 
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.prism.shader.Solid_TextureRGB_Loader",
+    "allDeclaredConstructors" : true, 
+    "allPublicConstructors" : true, 
+    "allDeclaredFields" : true, 
+    "allPublicFields" : true, 
+    "allDeclaredMethods" : true, 
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.prism.shader.Solid_TextureFirstPassLCD_Loader",
+    "allDeclaredConstructors" : true, 
+    "allPublicConstructors" : true, 
+    "allDeclaredFields" : true, 
+    "allPublicFields" : true, 
+    "allDeclaredMethods" : true, 
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.prism.shader.Texture_Color_Loader",
+    "allDeclaredConstructors" : true, 
+    "allPublicConstructors" : true, 
+    "allDeclaredFields" : true, 
+    "allPublicFields" : true, 
+    "allDeclaredMethods" : true, 
+    "allPublicMethods" : true
+ }
+,
+  {
+    "name" : "com.sun.prism.shader.FillPgram_Color_Loader",
+    "allDeclaredConstructors" : true, 
+    "allPublicConstructors" : true, 
+    "allDeclaredFields" : true, 
+    "allPublicFields" : true, 
+    "allDeclaredMethods" : true, 
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.prism.shader.Mask_TextureSuper_Loader",
+    "allDeclaredConstructors" : true, 
+    "allPublicConstructors" : true, 
+    "allDeclaredFields" : true, 
+    "allPublicFields" : true, 
+    "allDeclaredMethods" : true, 
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.prism.shader.Texture_LinearGradient_PAD_Loader",
+    "allDeclaredConstructors" : true, 
+    "allPublicConstructors" : true, 
+    "allDeclaredFields" : true, 
+    "allPublicFields" : true, 
+    "allDeclaredMethods" : true, 
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.prism.shader.Solid_TextureSecondPassLCD_Loader",
+    "allDeclaredConstructors" : true, 
+    "allPublicConstructors" : true, 
+    "allDeclaredFields" : true, 
+    "allPublicFields" : true, 
+    "allDeclaredMethods" : true, 
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.prism.shader.FillRoundRect_Color_Loader",
+    "allDeclaredConstructors" : true, 
+    "allPublicConstructors" : true, 
+    "allDeclaredFields" : true, 
+    "allPublicFields" : true, 
+    "allDeclaredMethods" : true, 
+    "allPublicMethods" : true
+  }
+
+]
