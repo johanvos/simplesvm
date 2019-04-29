@@ -45,6 +45,15 @@
     "allPublicMethods" : true
   },
   {
+    "name" : "javafx.scene.Camera",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
     "name" : "javafx.scene.Node",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
@@ -55,6 +64,33 @@
   },
   {
     "name" : "javafx.scene.Parent",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "javafx.scene.Scene",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "javafx.scene.ParallelCamera",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "javafx.scene.text.Font",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredFields" : true,

@@ -1,6 +1,6 @@
 #!/bin/sh
 SVMBUILD=/home/johan/graal/github/fork/graal/substratevm/svmbuild/native-image-root-11/
-JFXLIB=/home/johan/open-jfx/github/forks/openjdk-jfx/build/svmsdk/lib
+JFXLIB=/home/johan/open-jfx/github/forks/openjdk-jfx/build/sdk/lib
 PWD=`pwd`
 SVMLIB=$SVMBUILD/lib
 echo "Compile src\n============"
@@ -59,8 +59,10 @@ $JAVA_HOME/bin/java \
 -H:IncludeResources=.*/.*png$ \
 -H:IncludeResources=.*png$ \
 -H:IncludeResources=.*css$ \
+-H:IncludeResourceBundles=com.sun.javafx.tk.quantum.QuantumMessagesBundle \
 -H:+ReportUnsupportedElementsAtRuntime \
 -H:+AllowIncompleteClasspath \
+-H:+PrintClassInitialization  \
 -H:EnableURLProtocols=resource
 -H:ClassInitialization=javafx.scene.image.Image \
 echo "Native-image created\nRun the application now"
