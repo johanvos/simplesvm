@@ -64,7 +64,6 @@ $JAVA_HOME/bin/java \
 -H:+AllowIncompleteClasspath \
 -H:+PrintClassInitialization  \
 -H:EnableURLProtocols=resource
--H:ClassInitialization=javafx.scene.image.Image \
 echo "Native-image created\nRun the application now"
 ./image/hellofxsvm
 
