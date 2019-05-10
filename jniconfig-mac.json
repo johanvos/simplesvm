@@ -70,7 +70,11 @@
   }
 ,
   {
-    "name" : "java.lang.Thread",
+    "name" : "java.lang.Thread"
+  }
+,
+  {
+    "name" : "java.nio.ByteBuffer",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredFields" : true,
@@ -80,7 +84,7 @@
   }
 ,
   {
-    "name" : "java.nio.ByteBuffer",
+    "name" : "java.nio.charset.Charset",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredFields" : true,
