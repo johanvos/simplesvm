@@ -9,6 +9,15 @@
     "allPublicMethods" : true
   },
   {
+    "name" : "java.lang.Runnable",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
     "name" : "javafx.scene.control.Control",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
@@ -135,7 +144,34 @@
     "allPublicMethods" : true
   },
   {
+    "name" : "com.sun.glass.ui.Size",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "com.sun.glass.ui.mac.MacMenuBarDelegate",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
     "name" : "com.sun.glass.ui.mac.MacPlatformFactory",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "com.sun.glass.ui.mac.MacView",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredFields" : true,
@@ -192,6 +228,26 @@
 ,
   {
     "name" : "com.sun.javafx.font.coretext.CTFactory",
+    "allDeclaredConstructors" : true, 
+    "allPublicConstructors" : true, 
+    "allDeclaredFields" : true, 
+    "allPublicFields" : true, 
+    "allDeclaredMethods" : true, 
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.glass.ui.Application",
+    "allDeclaredConstructors" : true, 
+    "allPublicConstructors" : true, 
+    "allDeclaredFields" : true, 
+    "allPublicFields" : true, 
+    "allDeclaredMethods" : true, 
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.glass.ui.View",
     "allDeclaredConstructors" : true, 
     "allPublicConstructors" : true, 
     "allDeclaredFields" : true, 

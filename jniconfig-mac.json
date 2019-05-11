@@ -20,6 +20,16 @@
   }
 ,
   {
+    "name" : "java.lang.Class",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
     "name" : "java.lang.Integer",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
