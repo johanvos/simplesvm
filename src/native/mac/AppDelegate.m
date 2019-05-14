@@ -30,6 +30,9 @@ fprintf(stderr, "DIDFINISHLAUNCHING with options\n");
      [self performSelectorInBackground:@selector(startVM:) withObject:nil];
 }
 
+-(BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)app {
+    return YES;
+}
 
 @end
 
@@ -42,6 +45,13 @@ void outBox(int argc, char** argv) {
     NSApplication.sharedApplication.delegate = appDelegate;
     fprintf(stderr, "in outbox2, on thread %p\n", me);
     [NSApplication sharedApplication];
+
+    [NSApp setActivationPolicy:NSApplicationActivationPolicyRegular];
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+            [NSApp activateIgnoringOtherApps:YES];
+        });
+
     fprintf(stderr, "sharedall called\n");
     [NSApp run];
     fprintf(stderr, "in outbox3, on thread %p\n", me);
