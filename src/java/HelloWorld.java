@@ -5,6 +5,11 @@ public class HelloWorld {
 
     public static void main(String[] args) throws Exception  {
         System.err.println("Hello, world, in main");
+String os = System.getProperty("os.name");
+System.err.println("os = "+os);
+System.setProperty("os.name","iOS");
+String os2 = System.getProperty("os.name");
+System.err.println("os2 = "+os2);
 File f = new File("/Users/johan/ftt");
 String[] cc = f.list();
 for (String c: cc) {
