@@ -1,7 +1,7 @@
 #!/bin/sh
 SVMBUILD=/Users/johan/graal/github/fork/graal/substratevm/svmbuild/native-image-root-11/
-JFXLIB=/Users/johan/open-jfx/github/forks/openjdk-jfx/build/ios-sdk/lib
 PWD=`pwd`
+JFXLIB=$PWD/modules/ios
 SVMLIB=$SVMBUILD/lib
 echo "Compile src\n============"
 $JAVA_HOME/bin/javac -p $JFXLIB --add-modules javafx.controls -d class src/java/HelloFX.java
