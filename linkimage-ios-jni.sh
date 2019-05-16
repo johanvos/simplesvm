@@ -29,9 +29,10 @@ $1/hellofxsvm.o \
 -ljava -lnio -lzip -lnet -ljvm \
 build/ios/mythread.o \
 -Wl,-framework,Foundation \
+-Wl,-framework,UIKit \
 -Wl,-framework,CoreGraphics \
--Wl,-framework,OpenGLES \
 -Wl,-framework,MobileCoreServices \
+-Wl,-framework,OpenGLES \
 -Wl,-framework,CoreText \
 -Wl,-framework,ImageIO \
 -Wl,-framework,UserNotifications \
@@ -41,9 +42,8 @@ build/ios/mythread.o \
 -Wl,-framework,AVFoundation \
 -Wl,-framework,Accelerate \
 -Wl,-framework,CoreVideo \
--Wl,-framework,QuartzCore \
--Wl,-framework,UIKit
+-Wl,-framework,QuartzCore
 echo "preparing app\n=======\n"
 cp src/native/ios/Info.plist build/ios/hellofx.app
 echo "launching app\n=======\n"
-$PWD/src/native/ios/simlauncher  --udid=C3E4154D-00E8-4656-A284-FE9073ECAA10 --app-path=$PWD/build/ios/hellofx.app
+#$PWD/src/native/ios/simlauncher  --udid=C3E4154D-00E8-4656-A284-FE9073ECAA10 --app-path=$PWD/build/ios/hellofx.app
