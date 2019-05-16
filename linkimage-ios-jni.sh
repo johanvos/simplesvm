@@ -8,6 +8,7 @@ mkdir -p $PWD/build/ios
 echo "compiling\n=========\n"
 gcc -c -isysroot $SDK -o $PWD/build/ios/main.o $PWD/src/native/ios/main.m
 gcc -c -isysroot $SDK -o $PWD/build/ios/AppDelegate.o $PWD/src/native/ios/AppDelegate.m
+gcc -c -isysroot $SDK -o $PWD/build/ios/mythread.o $PWD/src/native/ios/mythread.m
 echo "linking\n=======\n"
 mkdir -p build/ios/hellofx.app
 clang++ -w -o build/ios/hellofx.app/hellofx \
@@ -19,12 +20,14 @@ clang++ -w -o build/ios/hellofx.app/hellofx \
 -Wl,-all_load,$JFXLIB/libprism_es2.a \
 -Wl,-all_load,$JFXLIB/libglass.a \
 -Wl,-all_load,$JFXLIB/libjavafx_font.a \
-build/ios/AppDelegate.o build/ios/main.o $1/helloworldsvmjni.o \
+build/ios/AppDelegate.o build/ios/main.o \
+$1/hellofxsvm.o \
 -L$SVMBUILD/lib/svm/clibraries/darwin-amd64 \
--L$PWD/staticlibs \
+-L$PWD/staticlibs/ios \
 -lffi \
 -lpthread -lz  -lstrictmath -llibchelper \
 -ljava -lnio -lzip -lnet -ljvm \
+build/ios/mythread.o \
 -Wl,-framework,Foundation \
 -Wl,-framework,CoreGraphics \
 -Wl,-framework,OpenGLES \

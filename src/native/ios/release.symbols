@@ -1,2 +1,7 @@
 _JNI_OnLoad*
 _Java_com_sun*
+_Java_java_io_UnixFileSystem_canonicalize0
+_Java_jdk_internal_misc_VM_getNanoTimeAdjustment
+_JNI_OnLoad_glass
+_JNI_OnLoad_prism_es2
+_JNI_OnLoad_javafx_font

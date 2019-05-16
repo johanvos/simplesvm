@@ -20,6 +20,16 @@
   }
 ,
   {
+    "name" : "java.lang.Class",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
     "name" : "java.lang.Integer",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
@@ -81,6 +91,16 @@
 ,
   {
     "name" : "java.nio.ByteBuffer",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "java.nio.charset.Charset",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredFields" : true,
@@ -250,17 +270,7 @@
   }
 ,
   {
-    "name" : "com.sun.glass.ui.ios.IosView",
-    "allDeclaredConstructors" : true,
-    "allPublicConstructors" : true,
-    "allDeclaredFields" : true,
-    "allPublicFields" : true,
-    "allDeclaredMethods" : true,
-    "allPublicMethods" : true
-  }
-,
-  {
-    "name" : "com.sun.glass.ui.ios.IosWindow",
+    "name" : "com.sun.glass.ui.ios.IosApplication",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredFields" : true,
@@ -280,6 +290,16 @@
   }
 ,
   {
+    "name" : "com.sun.glass.ui.ios.IosGestureSupport",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
     "name" : "com.sun.glass.ui.ios.IosPixels",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
@@ -290,7 +310,7 @@
   }
 ,
   {
-    "name" : "com.sun.glass.ui.ios.IosApplication",
+    "name" : "com.sun.glass.ui.ios.IosMenuBarDelegate",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredFields" : true,
@@ -300,7 +320,17 @@
   }
 ,
   {
-    "name" : "com.sun.glass.ui.ios.IosGestureSupport",
+    "name" : "com.sun.glass.ui.ios.IosView",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.glass.ui.ios.IosWindow",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredFields" : true,

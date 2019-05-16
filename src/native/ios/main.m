@@ -15,6 +15,11 @@ int main(int argc, char * argv[]) {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
+
+int JVM_GetInterfaceVersion() {
+    return 6;
+}
+
 /*
 double StrictMath_asin (double b) {
     fprintf(stderr, "[JVDBG] MATH asked\n");
@@ -70,6 +75,14 @@ void inflateReset() {
 
 
 struct dirent* readdir_r$INODE64(DIR *dirp) {
+    NSLog(@"%@", [NSThread callStackSymbols]);
+    
+    //  [NSThread callStackSymbols];
+    fprintf(stderr, "[JVDBG] readdir asked\n");
+    return readdir(dirp);
+}
+
+struct dirent* readdir$INODE64(DIR *dirp) {
     NSLog(@"%@", [NSThread callStackSymbols]);
     
     //  [NSThread callStackSymbols];
