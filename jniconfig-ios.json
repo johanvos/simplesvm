@@ -10,7 +10,27 @@
   }
 ,
   {
+    "name" : "java.io.InputStream",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
     "name" : "java.lang.Boolean",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "java.lang.ClassNotFoundException",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredFields" : true,
@@ -391,6 +411,16 @@
 ,
   {
     "name" : "com.sun.javafx.font.coretext.CGSize",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }
+,
+  {
+    "name" : "com.sun.javafx.iio.ios.IosImageLoader",
     "allDeclaredConstructors" : true,
     "allPublicConstructors" : true,
     "allDeclaredFields" : true,

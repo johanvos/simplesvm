@@ -1,6 +1,6 @@
 #!/bin/sh
 SVMBUILD=/Users/johan/graal/github/fork/graal/substratevm/svmbuild/native-image-root-11/
-JFXLIB=/Users/johan/open-jfx/github/forks/openjdk-jfx/build/sdk/lib
+JFXLIB=/Users/johan/open-jfx/github/forks/openjdk-jfx/build/macosx-sdk/lib
 PWD=`pwd`
 SVMLIB=$SVMBUILD/lib
 echo "Compile src\n============"

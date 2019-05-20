@@ -2,6 +2,9 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
 
 
 public class HelloFX extends Application {
@@ -13,12 +16,14 @@ public class HelloFX extends Application {
     public void start(Stage stage) {
         System.err.println("[JVDBG] APPLICATION HELLOFX start");
 System.err.println("A0");
+Image im = new Image (HelloFX.class.getResourceAsStream("/openduke.png"));
+ImageView iv = new ImageView(im);
         String jfxversion = System.getProperty("javafx.version");
 System.err.println("A1");
         String version = System.getProperty("java.version");
         Label l = new Label ("Hello, JavaFX "+jfxversion+", running on Java "+version);
 System.err.println("A2");
-        Scene scene = new Scene (l, 640, 480);
+        Scene scene = new Scene (new StackPane(iv), 640, 480);
 System.err.println("A3");
         stage.setScene(scene);
 System.err.println("A4");
