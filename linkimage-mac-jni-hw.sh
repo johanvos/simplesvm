@@ -8,7 +8,8 @@ mkdir -p $PWD/build/mac
 echo "compiling\n=========\n"
 gcc -c -o $PWD/build/mac/launcher.o $PWD/src/native/mac/launcher.c
 gcc -c -o $PWD/build/mac/AppDelegate.o $PWD/src/native/mac/AppDelegate.m
+gcc -c -o $PWD/build/mac/trash.o $PWD/src/native/mac/trash.c
 echo "linking\n=======\n"
-gcc -isysroot $SDK -fobjc-arc -o build/mac/helloworldsvmjni  build/mac/AppDelegate.o build/mac/launcher.o $1/helloworldsvmjni.o -L$JFXLIB -L$SVMBUILD/lib/svm/clibraries/darwin-amd64 -L$PWD/staticlibs -lffi -Wl,-framework,CoreFoundation -Wl,-framework,Appkit -lpthread -lz -ldl -lstrictmath -llibchelper -lprism_es2 -ljava -lnio -lzip -lnet /Users/johan/graal/github/fork/graal//substratevm/mxbuild/darwin-amd64/SVM_GRAALVM_SUPPORT/builder/clibraries/darwin-amd64/libjvm.a
+gcc -isysroot $SDK -fobjc-arc -o build/mac/helloworldsvmjni  build/mac/AppDelegate.o build/mac/launcher.o $1/helloworldsvmjni.o -L$JFXLIB -L$SVMBUILD/lib/svm/clibraries/darwin-amd64 -L$PWD/staticlibs -lffi -Wl,-framework,CoreFoundation -Wl,-framework,Appkit -lpthread -lz -ldl -lstrictmath -llibchelper  -ljava -lnio -lzip -lnet -lj2pkcs11 -lsunec /Users/johan/graal/github/fork/graal//substratevm/mxbuild/darwin-amd64/SVM_GRAALVM_SUPPORT/builder/clibraries/darwin-amd64/libjvm.a
 echo "running\n=======\n"
 #./build/mac/hellofx

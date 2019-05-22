@@ -59,13 +59,14 @@ $JAVA_HOME/bin/java \
 -H:IncludeResources=.*/.*ttf$ \
 -H:IncludeResources=.*/.*png$ \
 -H:IncludeResources=.*png$ \
+-H:IncludeResources=.*properties$ \
 -H:IncludeResources=.*css$ \
--H:IncludeResourceBundles=com.sun.javafx.tk.quantum.QuantumMessagesBundle \
+-H:IncludeResourceBundles=com/sun/javafx/scene/control/skin/resources/controls,com.sun.javafx.tk.quantum.QuantumMessagesBundle \
 -H:+ReportUnsupportedElementsAtRuntime \
 -H:+AllowIncompleteClasspath \
 -H:+PrintClassInitialization  \
 -H:+PrintAnalysisCallTree \
--H:Kind=SHARED_LIBRARY \
+-H:+SharedLibrary \
 -H:TempDirectory=$PWD/tmp \
 -H:EnableURLProtocols=resource
 echo "Native-image created\nRun the application now"

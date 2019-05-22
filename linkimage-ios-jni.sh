@@ -1,7 +1,7 @@
 #!/bin/sh
 SVMBUILD=/Users/johan/graal/github/fork/graal/substratevm/svmbuild/native-image-root-11/
 SDK=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk
-JFXLIB=staticlibs/ios
+JFXLIB=/Users/johan/open-jfx/github/forks/openjdk-jfx/build/ios-sdk/lib
 PWD=`pwd`
 echo "this should contain hellofxsvm.o: $1"
 mkdir -p $PWD/build/ios
@@ -19,12 +19,13 @@ clang++ -w -o build/ios/hellofx.app/hellofx \
 -Wl,-exported_symbols_list,$PWD/src/native/ios/release.symbols \
 -Wl,-all_load,$JFXLIB/libprism_es2.a \
 -Wl,-all_load,$JFXLIB/libglass.a \
--Wl,-all_load,$JFXLIB/libjavafx_iio.a \
 -Wl,-all_load,$JFXLIB/libjavafx_font.a \
+-Wl,-all_load,$JFXLIB/libjavafx_iio.a \
 build/ios/AppDelegate.o build/ios/main.o \
 $1/hellofxsvm.o \
 -L$SVMBUILD/lib/svm/clibraries/darwin-amd64 \
--L$PWD/staticlibs/ios \
+-L$PWD/staticlibs13/ios \
+-L$PWD/staticlibs13/ios/fx \
 -lffi \
 -lpthread -lz  -lstrictmath -llibchelper \
 -ljava -lnio -lzip -lnet -ljvm \

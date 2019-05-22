@@ -65,7 +65,7 @@ $JAVA_HOME/bin/java \
 -H:+AllowIncompleteClasspath \
 -H:+PrintClassInitialization  \
 -H:+PrintAnalysisCallTree \
--H:Kind=SHARED_LIBRARY \
+-H:+SharedLibrary \
 -H:TempDirectory=$PWD/tmp \
 -H:EnableURLProtocols=resource
 echo "Native-image created\nRun the application now"

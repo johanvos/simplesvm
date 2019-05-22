@@ -5,11 +5,14 @@ import java.net.*;
 public class HelloWorld {
 
     public static void main(String[] args) throws Exception  {
-        System.err.println("Hello, world, in main");
+        System.err.println("Hello, world, in main for https");
         try {
-            URL u = new URL("http://gluonhq.com");
+// java.lang.reflect.Field field = java.net.InetAddress.class.getDeclaredField("holder");
+// System.err.println("FIELD = "+field);
+            URL u = new URL("https://gluonhq.com");
             InputStream is = u.openStream();
             int av = is.available();
+System.err.println("av = "+av);
         } catch (Exception e) {
             e.printStackTrace();
         }

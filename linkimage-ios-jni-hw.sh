@@ -8,6 +8,7 @@ mkdir -p $PWD/build/ios
 echo "compiling\n=========\n"
 gcc -c -isysroot $SDK -o $PWD/build/ios/main.o $PWD/src/native/ios/main.m
 gcc -c -isysroot $SDK -o $PWD/build/ios/AppDelegate.o $PWD/src/native/ios/AppDelegate.m
+gcc -c -isysroot $SDK -o $PWD/build/ios/mythread.o $PWD/src/native/ios/mythread.m
 echo "linking\n=======\n"
 mkdir -p build/ios/hellofx.app
 clang++ -w -o build/ios/hellofx.app/hellofx \
@@ -15,11 +16,8 @@ clang++ -w -o build/ios/hellofx.app/hellofx \
 -Wl,-dead_strip \
 -fPIC \
 -isysroot $SDK -arch x86_64 -mios-version-min=8.0 \
--Wl,-exported_symbols_list,$PWD/src/native/ios/release.symbols \
--Wl,-all_load,$JFXLIB/libprism_es2.a \
--Wl,-all_load,$JFXLIB/libglass.a \
--Wl,-all_load,$JFXLIB/libjavafx_font.a \
-build/ios/AppDelegate.o build/ios/main.o $1/helloworldsvmjni.o \
+-Wl,-exported_symbols_list,$PWD/src/native/ios/release.symbols-hw \
+build/ios/AppDelegate.o build/ios/main.o build/ios/mythread.o $1/helloworld.o \
 -L$SVMBUILD/lib/svm/clibraries/darwin-amd64 \
 -L$PWD/staticlibs/ios \
 -lffi \
