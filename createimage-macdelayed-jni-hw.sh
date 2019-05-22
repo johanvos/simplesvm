@@ -1,6 +1,7 @@
 #!/bin/sh
 #SVMBUILD=/Users/johan/graal/github/fork/graal/substratevm/svmbuild/native-image-root-11/
-SVMBUILD=/Users/johan/.gluon/omega/graalLibs/11-ea+1
+#SVMBUILD=/Users/johan/.gluon/omega/graalLibs/11-ea+1
+SVMBUILD=/Users/johan/graal/github/fork/graal/vm/mxbuild/darwin-amd64/GRAALVM_SVM/graalvm-svm-20.0.0-beta.01-dev/Contents/Home
 JFXLIB=/Users/johan/open-jfx/github/forks/openjdk-jfx/build/sdk/lib
 PWD=`pwd`
 SVMLIB=$SVMBUILD/lib
@@ -15,6 +16,8 @@ $JAVA_HOME/bin/java \
 -Dtruffle.TrustAllTruffleRuntimeProviders=true \
 -Dsubstratevm.IgnoreGraalVersionCheck=true \
 -Djava.lang.invoke.stringConcat=BC_SB \
+-Dsvm.targetName=ios \
+-Dsvm.targetArch=arm64 \
 --add-exports jdk.internal.vm.ci/jdk.vm.ci.runtime=ALL-UNNAMED \
 --add-exports jdk.internal.vm.ci/jdk.vm.ci.code=ALL-UNNAMED \
 --add-exports jdk.internal.vm.ci/jdk.vm.ci.amd64=ALL-UNNAMED \

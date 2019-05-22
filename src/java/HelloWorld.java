@@ -6,10 +6,13 @@ public class HelloWorld {
 
     public static void main(String[] args) throws Exception  {
         System.err.println("Hello, world, in main for https");
+String on = System.getProperty("os.name");
+String oa = System.getProperty("os.arch");
+System.err.println("n = "+on+", a = "+oa);
         try {
 // java.lang.reflect.Field field = java.net.InetAddress.class.getDeclaredField("holder");
 // System.err.println("FIELD = "+field);
-            URL u = new URL("https://gluonhq.com");
+            URL u = new URL("http://gluonhq.com");
             InputStream is = u.openStream();
             int av = is.available();
 System.err.println("av = "+av);

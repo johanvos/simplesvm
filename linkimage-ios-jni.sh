@@ -24,8 +24,8 @@ clang++ -w -o build/ios/hellofx.app/hellofx \
 build/ios/AppDelegate.o build/ios/main.o \
 $1/hellofxsvm.o \
 -L$SVMBUILD/lib/svm/clibraries/darwin-amd64 \
--L$PWD/staticlibs13/ios \
--L$PWD/staticlibs13/ios/fx \
+-L$PWD/staticlibs/ios \
+-L$PWD/staticlibs/ios/fx \
 -lffi \
 -lpthread -lz  -lstrictmath -llibchelper \
 -ljava -lnio -lzip -lnet -ljvm \
@@ -49,3 +49,5 @@ echo "preparing app\n=======\n"
 cp src/native/ios/Info.plist build/ios/hellofx.app
 echo "launching app\n=======\n"
 #$PWD/src/native/ios/simlauncher  --udid=C3E4154D-00E8-4656-A284-FE9073ECAA10 --app-path=$PWD/build/ios/hellofx.app
+#./src/native/ios/simlauncher --udid=F238A21A-03EF-4051-8108-8F3673E3C059 --app-path=/Users/johan/javafx/samples/simplesvm/build/ios/hellofx.app
+
