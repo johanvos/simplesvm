@@ -1,5 +1,5 @@
 #!/bin/sh
-SVMBUILD=/Users/johan/graal/github/fork/graal/substratevm/svmbuild/native-image-root-11/
+SVMBUILD=/Users/johan/.gluon/omega/graalLibs/11-ea+1
 JFXLIB=/Users/johan/open-jfx/github/forks/openjdk-jfx/build/macosx-sdk/lib
 PWD=`pwd`
 SVMLIB=$SVMBUILD/lib
@@ -60,7 +60,7 @@ $JAVA_HOME/bin/java \
 -H:IncludeResources=.*/.*png$ \
 -H:IncludeResources=.*png$ \
 -H:IncludeResources=.*css$ \
--H:IncludeResourceBundles=com.sun.javafx.tk.quantum.QuantumMessagesBundle \
+-H:IncludeResourceBundles=com/sun/javafx/scene/control/skin/resources/controls,com.sun.javafx.tk.quantum.QuantumMessagesBundle \
 -H:+ReportUnsupportedElementsAtRuntime \
 -H:+AllowIncompleteClasspath \
 -H:+PrintClassInitialization  \

@@ -46,9 +46,9 @@ Button button = new Button("Click me");
 } 
 
     public static void main(String[] args) {
-        System.setProperty("os.target", "ios");
-        System.setProperty("os.name", "iOS");
-        System.setProperty("glass.platform", "ios");
+        // System.setProperty("os.target", "ios");
+        // System.setProperty("os.name", "iOS");
+        // System.setProperty("glass.platform", "ios");
         System.setProperty("javafx.verbose", "true");
         System.setProperty("prism.verbose", "true");
         launch();
