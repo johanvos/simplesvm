@@ -17,7 +17,7 @@ int main(int argc, char * argv[]) {
 }
 
 int JVM_GetInterfaceVersion() {
-    return 6;
+    return 5;
 }
 
 /*
