@@ -1,7 +1,9 @@
 #import "AppDelegate.h"
 // #include "hellojavafxlib.h"
 int startGVM();
-extern void *JavaMainWrapper__run__5087f5482cc9a6abc971913ece43acb471d2631b();
+// extern void *JavaMainWrapper__run__5087f5482cc9a6abc971913ece43acb471d2631b();
+extern void *IsolateEnterStub__JavaMainWrapper__run__5087f5482cc9a6abc971913ece43acb471d2631b__a61fe6c26e84dd4037e4629852b5488bfcc16e7e();
+
 
 // void determineCPUFeatures () {
     // fprintf(stderr, "determinecpufeatures called!!\n\n\n\n\n");
@@ -57,7 +59,7 @@ extern void *JavaMainWrapper__run__5087f5482cc9a6abc971913ece43acb471d2631b();
 
 int startGVM() {
     int ret;
-    fprintf(stderr, "Starting GVM\n");
+    fprintf(stderr, "Starting GVM for ios\n");
 /*
     fprintf(stderr, "Starting GVM, create isolatehread\n");
     graal_create_isolate_params_t isolate_params;
@@ -69,7 +71,8 @@ int startGVM() {
     }
 */
     // ret =  HelloEntry__callgluonentrypoint__957fc56bba4ed9a7a2d1849373316bada494979c(isolatethread, 20);
-    (*JavaMainWrapper__run__5087f5482cc9a6abc971913ece43acb471d2631b)(1);
+    // (*JavaMainWrapper__run__5087f5482cc9a6abc971913ece43acb471d2631b)(1);
+    (*IsolateEnterStub__JavaMainWrapper__run__5087f5482cc9a6abc971913ece43acb471d2631b__a61fe6c26e84dd4037e4629852b5488bfcc16e7e)(1);
 
 //    ret = FXEntry__runFXApp__a346e9c619a0cdb0ca82cb44b7818bf2352ab539(isolatethread, 20);
     // fprintf(stderr, "RESULT = %d\n",ret);
