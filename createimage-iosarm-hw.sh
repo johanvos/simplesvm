@@ -1,5 +1,8 @@
 #!/bin/sh
 SVMBUILD=/Users/johan/graal/github/fork/loic/graal/substratevm/svmbuild/native-image-root-11/
+# LLCROOT needs to point to dir that contains llc-aarch64 and libLLVM.dylib (from Drive)
+LLCROOT=/Users/johan/graal/llvm/customaarch64
+# Note: clibraries still point to amd. We only need the header files in compilation
 #JFXLIB=/Users/johan/open-jfx/github/forks/openjdk-jfx/build/ios-sdk/lib
 PWD=`pwd`
 SVMLIB=$SVMBUILD/lib
@@ -20,7 +23,7 @@ java \
 -Dcom.oracle.graalvm.isaot=true \
 -Dsvm.platform=org.graalvm.nativeimage.Platform\$DARWIN_AArch64 \
 -Dsvm.targetArch=arm \
--Dsvm.llvm.root=/Users/johan/graal/llvm/customaarch64 \
+-Dsvm.llvm.root=$LLCROOT \
 --add-exports jdk.internal.vm.ci/jdk.vm.ci.runtime=ALL-UNNAMED \
 --add-exports jdk.internal.vm.ci/jdk.vm.ci.code=ALL-UNNAMED \
 --add-exports jdk.internal.vm.ci/jdk.vm.ci.aarch64=ALL-UNNAMED \
@@ -53,7 +56,6 @@ java \
 com.oracle.svm.hosted.NativeImageGeneratorRunner \
 -imagecp $SVMLIB/jvmci/graal-sdk.jar:$SVMLIB/jvmci/graal.jar:$SVMLIB/svm/builder/llvm-wrapper.jar:$SVMLIB/svm/builder/objectfile.jar:$SVMLIB/svm/builder/pointsto.jar:$SVMLIB/svm/builder/svm.jar:$SVMLIB/svm/builder/javacpp.jar:$SVMLIB/svm/builder/graal-llvm.jar:$SVMLIB/svm/builder/svm-llvm.jar:$SVMLIB/svm/builder/llvm-platform-specific.jar:$SVMLIB/svm/library-support.jar:$PWD/class \
 -H:Path=$PWD/image \
--H:CLibraryPath=$SVMLIB/svm/clibraries/darwin-amd64 \
 -H:Class=HelloWorld \
 -H:+ReportExceptionStackTraces \
 -H:+SharedLibrary \
@@ -71,5 +73,5 @@ com.oracle.svm.hosted.NativeImageGeneratorRunner \
 -H:+AllowIncompleteClasspath \
 -H:CompilerBackend=llvm \
 -H:-SpawnIsolates \
--H:CLibraryPath=/Users/johan/graal/github/fork/loic/graal/substratevm/svmbuild/native-image-root-11/lib/svm/clibraries/darwin-arm64 \
+-H:CLibraryPath=$SVMLIB/svm/clibraries/darwin-amd64
 
