@@ -17,14 +17,15 @@ public class HelloFX extends Application {
     public void start(Stage stage) {
         System.err.println("[JVDBG] APPLICATION HELLOFX start");
 System.err.println("A0");
-Image im = new Image (HelloFX.class.getResourceAsStream("/openduke.png"));
-ImageView iv = new ImageView(im);
+// Image im = new Image (HelloFX.class.getResourceAsStream("/openduke.png"));
+// ImageView iv = new ImageView(im);
         String jfxversion = System.getProperty("javafx.version");
 System.err.println("A1");
         String version = System.getProperty("java.version");
         Label l = new Label ("Hello, JavaFX "+jfxversion+", running on Java "+version);
 System.err.println("A2");
-        Scene scene = new Scene (new StackPane(createNode()), 640, 480);
+        // Scene scene = new Scene (new StackPane(createNode()), 640, 480);
+        Scene scene = new Scene (l, 640, 480);
 System.err.println("A3");
         stage.setScene(scene);
 System.err.println("A4");
@@ -32,6 +33,7 @@ System.err.println("A4");
 System.err.println("A5");
     }
 
+/*
     Node createNode() {
 Button button = new Button("Click me");
         button.setOnAction(e -> {
@@ -44,6 +46,7 @@ Button button = new Button("Click me");
         });
     return button;
 } 
+*/
 
     public static void main(String[] args) {
         // System.setProperty("os.target", "ios");
