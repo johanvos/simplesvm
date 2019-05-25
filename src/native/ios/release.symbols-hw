@@ -1,0 +1,4 @@
+_JNI_OnLoad*
+_Java_com_sun*
+_Java_java_io_UnixFileSystem_canonicalize0
+_Java_jdk_internal_misc_VM_getNanoTimeAdjustment
