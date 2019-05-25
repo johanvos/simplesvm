@@ -1,5 +1,5 @@
 #!/bin/sh
-SVMBUILD=/Users/johan/graal/github/fork/graal/substratevm/svmbuild/native-image-root-11/
+SVMBUILD=/Users/johan/graal/github/fork/loic/graal/substratevm/svmbuild/native-image-root-11/
 JFXLIB=/Users/johan/open-jfx/github/forks/openjdk-jfx/build/sdk/lib
 PWD=`pwd`
 SVMLIB=$SVMBUILD/lib
@@ -12,6 +12,7 @@ $JAVA_HOME/bin/java \
 -XX:-UseJVMCICompiler \
 -Dtruffle.TrustAllTruffleRuntimeProviders=true \
 -Dsubstratevm.IgnoreGraalVersionCheck=true \
+-Dgraalvm.locatorDisabled=true \
 -Djava.lang.invoke.stringConcat=BC_SB \
 --add-exports jdk.internal.vm.ci/jdk.vm.ci.runtime=ALL-UNNAMED \
 --add-exports jdk.internal.vm.ci/jdk.vm.ci.code=ALL-UNNAMED \
@@ -31,13 +32,15 @@ $JAVA_HOME/bin/java \
 --add-opens java.base/java.net=ALL-UNNAMED \
 --add-opens java.base/java.nio=ALL-UNNAMED \
 --add-opens java.base/java.util=ALL-UNNAMED \
+--add-opens java.base/jdk.internal.logger=ALL-UNNAMED \
 --add-opens org.graalvm.sdk/org.graalvm.nativeimage.impl=ALL-UNNAMED \
 -Xss10m -Xms1g -Xmx13441813704 -Duser.country=US -Duser.language=en \
--Dgraalvm.version=1.0.0-rc13-gvm11-SNAPSHOT \
 -Xdebug \
 -Xrunjdwp:transport=dt_socket,server=y,address=8000,suspend=n \
--Dorg.graalvm.version=1.0.0-rc13-gvm11-SNAPSHOT \
+-Dgraalvm.version=1.0.0-rc18-SNAPSHOT \
+-Dorg.graalvm.version=1.0.0-rc18-SNAPSHOT \
 -Dcom.oracle.graalvm.isaot=true \
+-Dsvm.llvm.root=/Users/johan/graal/llvm/llvm/build \
 --module-path $SVMLIB/jvmci/graal-sdk.jar:$SVMLIB/truffle/truffle-api.jar \
 --upgrade-module-path $SVMLIB/jvmci/graal.jar \
 -cp $SVMLIB/jvmci/graal-sdk.jar:$SVMLIB/jvmci/graal.jar:$SVMLIB/svm/builder/svm-llvm.jar:$SVMLIB/svm/builder/graal-llvm.jar:$SVMLIB/svm/builder/objectfile.jar:$SVMLIB/svm/builder/pointsto.jar:$SVMLIB/svm/builder/svm.jar:$SVMLIB/svm/builder/llvm-platform-specific.jar:$SVMLIB/svm/builder/llvm-wrapper.jar:$SVMLIB/svm/builder/javacpp.jar com.oracle.svm.hosted.NativeImageGeneratorRunner \
@@ -46,7 +49,9 @@ $JAVA_HOME/bin/java \
 -H:CLibraryPath=$SVMLIB/svm/clibraries/darwin-amd64 \
 -H:Class=HelloFX \
 -H:+ReportExceptionStackTraces \
--H:Kind=SHARED_LIBRARY \
+-H:+PrintClassInitialization  \
+-H:+PrintAnalysisCallTree \
+-H:+SharedLibrary \
 -H:TempDirectory=$PWD/tmp \
 -H:NumberOfThreads=1 \
 -H:Name=hellofxsvm \
@@ -62,5 +67,4 @@ $JAVA_HOME/bin/java \
 -H:+AllowIncompleteClasspath \
 -H:EnableURLProtocols=resource \
 -H:CompilerBackend=llvm \
--H:-MultiThreaded \
 -H:-SpawnIsolates
