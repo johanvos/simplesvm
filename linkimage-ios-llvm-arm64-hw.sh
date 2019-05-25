@@ -5,21 +5,22 @@ JFXLIB=/Users/johan/open-jfx/github/forks/openjdk-jfx/build/ios-sdk/lib
 PWD=`pwd`
 BUILDDIR=$PWD/build/ios-arm64
 echo "this should contain helloworld.o: $1"
-mkdir -p $BUILDDIR
+mkdir -p $BUILDDIR/hellofx.app
 echo "compiling\n=========\n"
 gcc -xobjective-c -c -fPIC -arch arm64 -isysroot $SDK -o $BUILDDIR/main.o $PWD/src/native/ios/main.m
 gcc -xobjective-c -c -fPIC -arch arm64 -isysroot $SDK -o $BUILDDIR/AppDelegate.o $PWD/src/native/ios/AppDelegate.m
-gcc -xobjective-c c -fPIC -arch arm64 -isysroot $SDK -o $BUILDDIR/mythread.o $PWD/src/native/ios/mythread.m
+gcc -xobjective-c -c -fPIC -arch arm64 -isysroot $SDK -o $BUILDDIR/mythread.o $PWD/src/native/ios/mythread.m
+gcc -xobjective-c -c -fPIC -arch arm64 -isysroot $SDK -o $BUILDDIR/dummy.o $PWD/src/native/ios/dummy.m
 echo "linking\n=======\n"
 mkdir -p build/ios/hellofx.app
-clang++ -w -o build/ios-arm64/hellofx.app/hellofx \
+echo clang++ -w -o build/ios-arm64/hellofx.app/hellofx \
 -arch arm64 \
 -Wl,-no_implicit_dylibs \
 -Wl,-dead_strip \
 -fPIC \
 -isysroot $SDK -arch=arm64 -mios-version-min=8.0 \
--Wl,-exported_symbols_list,$PWD/src/native/ios/release.symbols-hw \
-$BUILDDIR/AppDelegate.o $BUILDDIR/main.o $BUILDDIR/mythread.o $1/helloworld.o $1/llvm.o \
+-Wl,-exported_symbols_list,$PWD/src/native/ios/release.symbols-arm-hw \
+$BUILDDIR/AppDelegate.o $BUILDDIR/main.o $BUILDDIR/mythread.o $BUILDDIR/dummy.o $1/helloworld.o $1/llvm.o \
 -L$SVMBUILD/lib/svm/clibraries/darwin-amd64 \
 -L$PWD/staticlibs/ios \
 -lffi \
